@@ -41,7 +41,7 @@ export default class Profile extends Component {
         <div className="avatar-section">
           <img src={ person.avatarUrl() ? person.avatarUrl() : avatarFallbackImage } className="img-rounded avatar" id="avatar-image" />
         </div>
-        <h1><span id="heading-name">{ person.name() ? person.name() : 'Nameless Person' }’s Ethereum Wallet</span>!</h1>
+        <h1><span id="heading-name">{ person.name() ? person.name() : 'Nameless Person' }’s<br/>Blockstack Ether Wallet</span>!</h1>
         <p>
           <label>Your address:</label>
           <br/>
@@ -54,12 +54,13 @@ export default class Profile extends Component {
         </div>
         <p>
           <label>Your private key:</label>
-          <button
-            className="btn btn-link btn-sm"
+          &nbsp;&nbsp;
+          <a
             onClick={ this.toggleShowPrivateKey }
+            href=""
           >
             {showPrivateKey ? 'Hide' : 'Show'}
-          </button>
+          </a>
           <br/>
           {showPrivateKey ? privateKey : '* * * * * * * * * * * * *'}
         </p>
