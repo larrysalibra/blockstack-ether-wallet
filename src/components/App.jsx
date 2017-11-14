@@ -17,7 +17,7 @@ export default class App extends Component {
 
   handleSignIn(e) {
     e.preventDefault();
-    redirectToSignIn();
+    redirectToSignIn(window.location.origin, window.location.origin + '/manifest.json', []);
   }
 
   handleSignOut(e) {
